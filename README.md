@@ -1,0 +1,1 @@
+# ulgtu-schedule-python
