@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates';
+}
+:root {
+    --primary: #000000;
+    --secondary: #F2C8ED;
+    --background: #ffffff;
+}
+body {
+    color: var(--primary);
+    background: var(--background);
+}
+#title {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+#select-week {
+    margin: 20px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.select-week__button {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 60px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    transition: .3s;
+}
+.select-week__button:hover {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: .3s;
+}
+#timetable {
+    display: none;
+    transition: .3s;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.timetable__day {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    width: 1366px;
+    border-radius: 16px;
+    transition: .3s;
+}
+.timetable__day:nth-child(7) {
+    display: none;
+}
+.timetable__day-opened .timetable__lesson {
+    height: 200px;
+    color: inherit;
+}
+.timetable__day-name {
+    font-size: 24px;
+    font-weight: 500;
+}
+.timetable__container-lessons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.timetable__lesson {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: transparent;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 150px;
+    height: 0px;
+    transition: .3s;
+    overflow: hidden;
+}
+.active:nth-child(even) {
+    background: rgba(255, 216, 61, 0.2);
+}
+.active:nth-child(odd) {
+    background: rgba(164, 188, 146, 0.2);
+}
+
